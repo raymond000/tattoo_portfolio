@@ -1,0 +1,226 @@
+body, html {
+  margin: 0;  
+  background-color: #f9f9f9;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+}
+
+/* ======= navbar styles ======= */
+/* #firstHeader {
+  display: block;
+} */
+.fixed-top {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background: #404141;
+  color: #fff;
+  flex-wrap: nowrap;
+  z-index: 2;
+  margin-bottom: 3px;
+  }
+  
+  #firstHeader a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  }
+  .linksOnLarge {
+   display: none;
+   padding: 10px 15px;
+   
+  }
+  
+  .bars {
+  margin-left: auto;
+  clear: right;
+  
+  }
+  .navOnSmallContainer {
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding-top: 48px;
+  }
+  
+  .onSmallLinks {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  }
+  
+  .linksOnSmall:hover {
+  background: #0e1111;
+  }
+  
+  .mainHeader {
+  padding: 150px 20%;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 1em
+  
+  }
+  h1 {
+  font-weight: 400;
+  }
+  
+  /* ======= /navbar styles ======= */
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.75;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background: url(pics/background.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  z-index: -1;
+  display: block;
+  margin-top: 22px;
+ 
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background: url(pics/portfolioBackground.jpg);
+  max-height: 400px;
+  background-size: cover;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background: url(pics/contact2.jpg);
+  min-height: 500px;
+  background-size: cover;
+}
+
+
+
+#about header {
+margin: 0 10%;
+padding-top: 40px;
+text-align: center;
+}
+#about article,
+#portfolio article ,
+#contactInfo article header {
+margin: 0 5%;
+text-align: center;
+}
+
+.skills {
+display: inline-block;
+font-weight: bold;
+list-style-type: none;
+}
+
+.contact-info {
+margin-left: 5%;
+margin-bottom: 100px;
+font-weight: bold;
+}
+
+.picOfMe {
+position: center;
+border-radius: 5%;
+}
+
+a {
+color: #000;
+}
+
+p {
+font-weight: 600;
+}
+#googleMap {
+border-radius: 3%;
+margin: 0 5%;
+
+-webkit-filter: grayscale(75%); /* Safari 6.0 - 9.0 */
+filter: grayscale(75%);
+}
+/* ======= footer ======= */
+footer {
+text-align: center;
+background: #404141;
+z-index: -1;
+padding-top: 30px;
+color: #fff;
+}
+
+.button-to-top {
+border: 1px solid black;
+padding: 10px 15px;
+margin-top: 15px;
+background: #fff;
+}
+.button-to-top:hover {
+background: #000;
+color: #fff;
+}
+#social-icons a { 
+color: white;
+}
+#social-icons a:hover {
+color: 	#acacab;
+}
+
+#social-icons {
+margin-top: 25px;
+padding-bottom: 25px;
+}
+
+.smllr {
+  height: 300px;
+  width: 400px;
+}
+/* ======= @media queries ======= */
+@media (min-width: 682px) {
+.bars {
+  display:none;
+}
+.linksOnLarge {
+  display: block;
+  float: right;
+}
+.picOfMe {
+  width: 75%;
+  height: auto;
+}
+.sideBySideMapInfo {
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+}
+@media (min-width: 990px) {
+#about article {
+  display: grid;
+  grid-template-colums: repeat(2, 1fr);
+  grid-template-areas: "pic bio"
+}
+
+#about article figure {
+  grid-area: pic;
+}
+.bio {
+  grid-area: bio;
+  margin-top: 55px;
+}
+
+.iframes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+ 
+}
+}
